@@ -152,8 +152,8 @@ CUDA_VISIBLE_DEVICES=0 python -u test.py \
 
 ```latex
 @inproceedings{sun2024Enhancing,
-  title={Enhancing Blind Video Quality Assessment with Rich Quality-aware Features},
-  author={Sun, Wei and Wu, Haoning and Zhang, Zicheng and Jia, Jun and Zhang, Zhichao and Cao, Linhan and Chen, Qiubo and Min, Xiongkuo and Lin, Weisi and Zhai Guangtao},
+  title={Dual-Branch Network for Portrait Image Quality Assessment},
+  author={Sun, Wei and Zhang, Weixia and Jiang, Yanwei, and Wu, Haoning and Zhang, Zicheng and Jia, Jun and Zhou, Yingjie and Ji, Zhongpeng and Chen, Xiongkuo and Lin, Weisi and Zhai Guangtao},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
   year={2024}
 }
