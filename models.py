@@ -102,7 +102,7 @@ class RQ_VQA(torch.nn.Module):
 class RQ_VQA_base_model(torch.nn.Module):
     def __init__(self, pretrained_path):
         
-        super(RQ_VQA, self).__init__()
+        super(RQ_VQA_base_model, self).__init__()
         model = Swin_b_384_in22k(global_pool='avg')
         if pretrained_path!= None:
             model.load_state_dict(torch.load(pretrained_path))

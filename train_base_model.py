@@ -33,9 +33,9 @@ def main(config):
 
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
-        if config.model_name == 'RQ_VQA':
+        if config.model_name == 'RQ_VQA_base_model':
             print('The current model is ' + config.model_name)
-            model = models.RQ_VQA(config.pretrained_path)
+            model = models.RQ_VQA_base_model(config.pretrained_path)
 
 
         if config.multi_gpu:
