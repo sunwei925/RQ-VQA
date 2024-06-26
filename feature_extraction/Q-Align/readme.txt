@@ -19,5 +19,4 @@ B). The ouput prefix is the path you want to save the q-align features.
 
 
 3) The code automatically download the q-align model weight from the huggingface, which is about 20G.
-If you have the weight locally, change the "using_local_model = False" on line 41 of "q_align_feature_extract.py"
-and update the weight path on line 48.
+If you have the weight locally, change the "using_local_model = False" on line 41 of "q_align_feature_extract.py", update the weight path on line 48, and update the weight path on line 260, 261 of "model/modeling_mplug_owl2.py".

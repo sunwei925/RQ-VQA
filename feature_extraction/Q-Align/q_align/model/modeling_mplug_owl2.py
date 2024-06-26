@@ -252,8 +252,11 @@ class MPLUGOwl2LlamaForCausalLM(LlamaForCausalLM, MPLUGOwl2MetaForCausalLM):
         super(LlamaForCausalLM, self).__init__(config)
         self.model = MPLUGOwl2LlamaModel(config)
         
-        self.tokenizer = AutoTokenizer.from_pretrained("q-future/one-align")
-        self.image_processor = CLIPImageProcessor.from_pretrained("q-future/one-align")
+
+
+
+        self.tokenizer = AutoTokenizer.from_pretrained("/data/sunwei_data/one-align/")
+        self.image_processor = CLIPImageProcessor.from_pretrained("/data/sunwei_data/one-align/")
 
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
         self.preferential_ids_ = [id_[1] for id_ in self.tokenizer(["excellent","good","fair","poor","bad"])["input_ids"]]

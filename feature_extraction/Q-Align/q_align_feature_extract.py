@@ -38,14 +38,14 @@ def disable_torch_init():
 from PIL import Image
 import numpy as np
 
-using_local_model = False
+using_local_model = True
 #using local mode
 if using_local_model == True:
     disable_torch_init()
     os.environ["HF_DATASETS_OFFLINE"] = "1"
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
     model_name = get_model_name_from_path("q-future/one-align")
-    tokenizer, model, image_processor, context_len = load_pretrained_model("/Repo/zyj/Project/Q/Q-Align/q-future/one-align", None, model_name, load_8bit=True, load_4bit=True, device="cuda:0")
+    tokenizer, model, image_processor, context_len = load_pretrained_model("/data/sunwei_data/one-align/", None, model_name, load_8bit=True, load_4bit=True, device="cuda:0")
 else:
     #this code will automatically download the one-align weight from the huggingface
     disable_torch_init()

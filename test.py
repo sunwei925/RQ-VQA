@@ -9,7 +9,7 @@ import random
 
 from data_loader import BVQA_VideoDataset
 
-import baseline_Swin_motion
+import models
 
 from torchvision import transforms
 
@@ -37,7 +37,7 @@ def main(config):
 
 
 
-        model = baseline_Swin_motion.Swin_b_384_in22k_SlowFast_Fast_LLM_LIQE_FASTVQA_BoT(None)
+        model = models.RQ_VQA_base_model(None)
 
         model = torch.nn.DataParallel(model, device_ids=config.gpu_ids)
 
