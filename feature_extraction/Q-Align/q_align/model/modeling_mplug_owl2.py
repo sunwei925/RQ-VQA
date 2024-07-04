@@ -255,6 +255,8 @@ class MPLUGOwl2LlamaForCausalLM(LlamaForCausalLM, MPLUGOwl2MetaForCausalLM):
 
 
 
+
+
         self.tokenizer = AutoTokenizer.from_pretrained("/data/sunwei_data/one-align/")
         self.image_processor = CLIPImageProcessor.from_pretrained("/data/sunwei_data/one-align/")
 

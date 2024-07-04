@@ -1,9 +1,45 @@
 # RQ-VQA
-Enhancing Blind Video Quality Assessment with Rich Quality-aware Features
 
-This is a repository for the models proposed in the paper "Enhancing Blind Video Quality Assessment with Rich Quality-aware Features". [Arxiv Version](https://arxiv.org/abs/2405.08745)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=sunwei925/RQ-VQA) [![](https://img.shields.io/github/stars/sunwei925/RQ-VQA)](https://github.com/sunwei925/RQ-VQA)
+[![Pytorch](https://img.shields.io/badge/PyTorch-1.13%2B-brightgree?logo=PyTorch)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/sunwei925/RQ-VQA)
+[![arXiv](https://img.shields.io/badge/build-paper-red?logo=arXiv&label=arXiv)](https://arxiv.org/abs/2405.08745)
 
-RQ-VQA won **first place** in [NTIRE 2024 Short-form UGC Video Quality Assessment Challenge](https://codalab.lisn.upsaclay.fr/competitions/17638).
+
+🏆 🥇 **Winner solution for [NTIRE 2024 Short-form UGC Video Quality Assessment Challenge](https://codalab.lisn.upsaclay.fr/competitions/17638) at the [NTIRE 2024](https://cvlai.net/ntire/2024/) workshop @ CVPR 2024** 
+
+
+Official Code for **[Enhancing Blind Video Quality Assessment with Rich Quality-aware Features](https://arxiv.org/abs/2405.08745)**
+
+## TODO 
+- [] release the test code for a single video
+- [ ] release the training code for other VQA datasets
+
+### Introduction
+In this paper, we present a simple but effective method to enhance blind video quality assessment (BVQA) models for social media videos. Motivated by previous researches that leverage pre-trained features extracted from various computer vision models as the feature representation for BVQA, we further explore rich quality-aware features from pre-trained blind image quality assessment (BIQA) and BVQA models as auxiliary features to help the BVQA model to handle complex distortions and diverse content of social media videos. Specifically, we use SimpleVQA, a BVQA model that consists of a trainable Swin Transformer-B and a fixed SlowFast, as our base model. The Swin Transformer-B and SlowFast components are responsible for extracting spatial and motion features, respectively. Then, we extract three kinds of features from Q-Align, LIQE, and FAST-VQA to capture frame-level quality-aware features, frame-level quality-aware along with scene-specific features, and spatiotemporal quality-aware features, respectively. Through concatenating these features, we employ a multi-layer perceptron (MLP) network to regress them into quality scores. Experimental results demonstrate that the proposed model achieves the best performance on three public social media VQA datasets.
+
+
+### Model
+![Model Figure](./figures/model.PNG)
+
+### Performance
+#### Performance on social media video quality assessment datasets
+![Model Performance](./figures/performance.PNG)
+
+
+#### Performance on NTIRE Challenge
+
+
+| Team | SRCC | PLCC | RANK1 | RANK2 | Scores |
+| :---: | :---:| :---:|:---: |:---: |:---: |
+| **SJTU MMLab (ours)** | **0.9361** | **0.9359** | **0.7792** | 0.8284 | **0.9228** |
+| IH-VQA (WeChat) | 0.9298 | 0.9325 |  0.7013 |  0.8284 | 0.9145 |
+| TVQE (Tecent) | 0.9268 | 0.9312 |  0.6883 | 0.8284 | 0.9120 |
+| BDVQAGroup (ByteDance) | 0.9275 | 0.9211 |  0.7489 | **0.8462** | 0.9116 |
+| VideoFusion (Zhejiang University) | 0.9026 | 0.9071 |  0.7186 | 0.8580 | 0.8932 |
+
+
+- for more results on the NTIRE challenge, please refer to the [challenge report](https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/papers/Li_NTIRE_2024_Challenge_on_Short-form_UGC_Video_Quality_Assessment_Methods_CVPRW_2024_paper.pdf)
 
 ### Environments
 - Base model: timm==0.6.13 (higer version will cause error), pytorch>=1.13 (test on 1.13), torchvision, cv2, pandas
