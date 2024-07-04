@@ -187,10 +187,10 @@ CUDA_VISIBLE_DEVICES=0 python -u test.py \
 **If you find this code is useful for  your research, please cite**:
 
 ```latex
-@inproceedings{sun2024Enhancing,
+@article{sun2024enhancing,
   title={Enhancing Blind Video Quality Assessment with Rich Quality-aware Features},
-  author={Sun, Wei and Wu, Haoning and Zhang, Zicheng and Jia, Jun and Zhang, Zhichao and Cao, Linhan and Chen, Qiubo and Min, Xiongkuo and Lin, Weisi and Zhai Guangtao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  author={Sun, Wei and Wu, Haoning and Zhang, Zicheng and Jia, Jun and Zhang, Zhichao and Cao, Linhan and Chen, Qiubo and Min, Xiongkuo and Lin, Weisi and Zhai, Guangtao},
+  journal={arXiv preprint arXiv:2405.08745},
   year={2024}
 }
 ```
