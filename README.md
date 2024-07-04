@@ -41,16 +41,18 @@ In this paper, we present a simple but effective method to enhance blind video q
 
 - for more results on the NTIRE challenge, please refer to the [challenge report](https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/papers/Li_NTIRE_2024_Challenge_on_Short-form_UGC_Video_Quality_Assessment_Methods_CVPRW_2024_paper.pdf).
 
-### Environments
+### Usage
+
+#### Environments
 - Base model: timm==0.6.13 (higer version will cause error), pytorch>=1.13 (test on 1.13), torchvision, cv2, pandas
 - For FAST-VQA feature extraction: the same requirement in https://github.com/VQAssessment/FAST-VQA-and-FasterVQA
 - For LIQE feature extraction: ftfy, regex, tqdm, clip (pip install git+https://github.com/openai/CLIP.git)
 - For Q-Align feature extraction: the same requirement in https://github.com/Q-Future/Q-Align
 
-### Dataset
+#### Dataset
 Download the [KVQ dataset](https://lixinustc.github.io/projects/KVQ/)
 
-### Train RQ-VQA
+#### Train RQ-VQA
 - Frame extraction
 ```
 python frame_extraction/extract_frame_NTIREVideo_384p.py --filename_path data/train_data.csv --videos_dir /data/sunwei_data/ntire_video --save_folder /data/sunwei_data/ntire_video/test_image_384p
@@ -168,7 +170,7 @@ For computational efficiency, you can simply train the base model, which does no
  >> logs/train.log
 ```
 
-### Test RQ-VQA
+#### Test RQ-VQA
 - Download the [model weighs](https://drive.google.com/file/d/1mcJdgYZPybUvLfWTUtZOhktsSsPlekgv/view?usp=sharing) trained on KVQ.
 - Extract video frames, SlowFast features, FASTVQA features, LIQE features, and Q-Align features of KVQ validation and test sets.
 - Run the code
