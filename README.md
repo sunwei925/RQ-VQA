@@ -11,8 +11,8 @@
 
 Official Code for **[Enhancing Blind Video Quality Assessment with Rich Quality-aware Features](https://arxiv.org/abs/2405.08745)**
 
-## TODO 
-- [] release the test code for a single video
+### TODO 
+- [ ] release the test code for a single video
 - [ ] release the training code for other VQA datasets
 
 ### Introduction
@@ -39,7 +39,7 @@ In this paper, we present a simple but effective method to enhance blind video q
 | VideoFusion (Zhejiang University) | 0.9026 | 0.9071 |  0.7186 | 0.8580 | 0.8932 |
 
 
-- for more results on the NTIRE challenge, please refer to the [challenge report](https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/papers/Li_NTIRE_2024_Challenge_on_Short-form_UGC_Video_Quality_Assessment_Methods_CVPRW_2024_paper.pdf)
+- for more results on the NTIRE challenge, please refer to the [challenge report](https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/papers/Li_NTIRE_2024_Challenge_on_Short-form_UGC_Video_Quality_Assessment_Methods_CVPRW_2024_paper.pdf).
 
 ### Environments
 - Base model: timm==0.6.13 (higer version will cause error), pytorch>=1.13 (test on 1.13), torchvision, cv2, pandas
