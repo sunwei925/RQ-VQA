@@ -171,7 +171,7 @@ For computational efficiency, you can simply train the base model, which does no
 ```
 
 #### Test RQ-VQA
-- Download the [model weighs](https://drive.google.com/file/d/1mcJdgYZPybUvLfWTUtZOhktsSsPlekgv/view?usp=sharing) trained on KVQ.
+- Download the [model weighs](https://www.dropbox.com/scl/fi/b551w7pha3wni0i4do143/ckpts.tar?rlkey=5w9folofqalnoi8lspqw7og3r&st=pj5p23kg&dl=0) trained on KVQ.
 - Extract video frames, SlowFast features, FASTVQA features, LIQE features, and Q-Align features of KVQ validation and test sets.
 - Run the code
 ```
